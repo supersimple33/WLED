@@ -206,7 +206,7 @@ void WLED::loop()
       
       for (uint8_t i = 0; i < 10; i++) {
         // check that ips are valid (these checks may not be valid as unsure of when ip should not be 255)
-        if (specialSearchNodes[i].isSet() && specialSearchNodes[i] != INADDR_NONE) { // check that ip is not 255s
+        if (specialSearchNodes[i] != INADDR_NONE) { // check that ip is not 255s
           sendSysInfoUDP(specialSearchNodes[i]);
         }
       }
